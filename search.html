@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Find Matches - Sushma Matrimony</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            💍 Sushma Matrimony
+        </div>
+
+        <div class="nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="profile.html">
+                My Profile
+            </a>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+<section class="search-section">
+
+    <h1>Find Your Match</h1>
+
+    <p>
+        Search for profiles that match your preferences.
+    </p>
+
+
+    <div class="search-box">
+
+        <select id="searchGender">
+
+            <option value="">
+                Gender
+            </option>
+
+            <option value="Male">
+                Male
+            </option>
+
+            <option value="Female">
+                Female
+            </option>
+
+        </select>
+
+
+        <input
+            type="number"
+            id="minAge"
+            placeholder="Min Age"
+        >
+
+
+        <input
+            type="number"
+            id="maxAge"
+            placeholder="Max Age"
+        >
+
+
+        <input
+            type="text"
+            id="searchCity"
+            placeholder="City"
+        >
+
+
+        <button onclick="searchProfiles()">
+            Search
+        </button>
+
+    </div>
+
+
+    <div id="profilesContainer"
+         class="profiles-container">
+
+
+        <div class="match-card">
+
+            <div class="match-photo">
+                👩
+            </div>
+
+            <h2>Sample Profile</h2>
+
+            <p>24 years</p>
+
+            <p>📍 Coimbatore</p>
+
+            <p>🎓 B.E Computer Science</p>
+
+            <button onclick="sendInterest()">
+                ❤️ Send Interest
+            </button>
+
+        </div>
+
+
+        <div class="match-card">
+
+            <div class="match-photo">
+                👨
+            </div>
+
+            <h2>Sample Profile</h2>
+
+            <p>27 years</p>
+
+            <p>📍 Chennai</p>
+
+            <p>💼 Software Engineer</p>
+
+            <button onclick="sendInterest()">
+                ❤️ Send Interest
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>
