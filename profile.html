@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>My Profile - Sushma Matrimony</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            💍 Sushma Matrimony
+        </div>
+
+        <div class="nav-links">
+
+            <a href="index.html">Home</a>
+
+            <a href="search.html">Find Matches</a>
+
+            <a href="#" onclick="logout()">
+                Logout
+            </a>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+<section class="profile-section">
+
+    <div class="profile-card">
+
+        <div class="profile-photo">
+
+            <div class="photo-placeholder">
+                👤
+            </div>
+
+        </div>
+
+
+        <div class="profile-details">
+
+            <h1>My Profile</h1>
+
+            <h2 id="profileName">
+                Your Name
+            </h2>
+
+            <p>
+                📍 <span id="profileCity">
+                    City
+                </span>
+            </p>
+
+            <p>
+                🎓 <span id="profileEducation">
+                    Education
+                </span>
+            </p>
+
+            <p>
+                💼 <span id="profileOccupation">
+                    Occupation
+                </span>
+            </p>
+
+            <p>
+                ❤️ Looking for a meaningful relationship
+            </p>
+
+            <button onclick="editProfile()">
+                Edit Profile
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>
