@@ -1,0 +1,917 @@
+/* ================================
+   SUSHMA MATRIMONY
+   MAIN STYLE SHEET
+================================ */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    color: #333;
+
+    background: #ffffff;
+
+    line-height: 1.6;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+
+/* ================================
+   NAVIGATION
+================================ */
+
+.navbar {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 18px 7%;
+
+    background: white;
+
+    box-shadow:
+        0 2px 10px
+        rgba(0,0,0,0.1);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+}
+
+
+.logo {
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+    color: #8b1e3f;
+}
+
+
+.nav-links {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+
+.nav-links a {
+
+    color: #333;
+
+    font-weight: 500;
+
+}
+
+
+.login-btn {
+
+    padding: 9px 18px;
+
+    border: 1px solid #8b1e3f;
+
+    border-radius: 6px;
+
+    color: #8b1e3f !important;
+}
+
+
+.register-btn {
+
+    padding: 10px 18px;
+
+    background: #8b1e3f;
+
+    color: white !important;
+
+    border-radius: 6px;
+}
+
+
+/* ================================
+   HERO
+================================ */
+
+.hero {
+
+    min-height: 80vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(80,20,40,0.65),
+            rgba(80,20,40,0.65)
+        ),
+        url("../images/wedding.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+
+.hero-content {
+
+    max-width: 750px;
+
+    padding: 30px;
+
+    color: white;
+}
+
+
+.hero h1 {
+
+    font-size: 52px;
+
+    margin-bottom: 20px;
+}
+
+
+.hero p {
+
+    font-size: 20px;
+
+    margin-bottom: 30px;
+}
+
+
+.main-btn {
+
+    display: inline-block;
+
+    padding: 14px 32px;
+
+    background: white;
+
+    color: #8b1e3f;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+}
+
+
+.main-btn:hover {
+
+    transform: scale(1.05);
+
+}
+
+
+/* ================================
+   ABOUT
+================================ */
+
+.about {
+
+    text-align: center;
+
+    padding: 80px 10%;
+}
+
+
+.about h2,
+.features h2,
+.steps h2,
+.contact h2 {
+
+    color: #8b1e3f;
+
+    font-size: 34px;
+
+    margin-bottom: 20px;
+}
+
+
+.about p {
+
+    max-width: 850px;
+
+    margin: auto;
+}
+
+
+/* ================================
+   FEATURES
+================================ */
+
+.features {
+
+    padding: 80px 8%;
+
+    text-align: center;
+
+    background: #fff5f7;
+}
+
+
+.feature-container {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+
+    margin-top: 35px;
+}
+
+
+.feature-card {
+
+    width: 280px;
+
+    padding: 35px 25px;
+
+    background: white;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 20px
+        rgba(0,0,0,0.08);
+}
+
+
+.feature-icon {
+
+    font-size: 45px;
+
+    margin-bottom: 15px;
+}
+
+
+.feature-card h3 {
+
+    color: #8b1e3f;
+
+    margin-bottom: 10px;
+}
+
+
+/* ================================
+   HOW IT WORKS
+================================ */
+
+.steps {
+
+    text-align: center;
+
+    padding: 80px 8%;
+}
+
+
+.steps-container {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+
+    flex-wrap: wrap;
+}
+
+
+.step {
+
+    width: 250px;
+
+    padding: 25px;
+}
+
+
+.step span {
+
+    display: inline-flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    width: 50px;
+
+    height: 50px;
+
+    border-radius: 50%;
+
+    background: #8b1e3f;
+
+    color: white;
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+    margin-bottom: 15px;
+}
+
+
+/* ================================
+   CONTACT
+================================ */
+
+.contact {
+
+    text-align: center;
+
+    padding: 70px 10%;
+
+    background: #fff5f7;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+
+    text-align: center;
+
+    padding: 20px;
+
+    background: #8b1e3f;
+
+    color: white;
+}
+
+
+/* ================================
+   REGISTRATION
+================================ */
+
+.registration {
+
+    min-height: 90vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 50px 20px;
+
+    background: #fff5f7;
+}
+
+
+.registration-box {
+
+    width: 100%;
+
+    max-width: 600px;
+
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 25px
+        rgba(0,0,0,0.1);
+}
+
+
+.registration-box h1 {
+
+    text-align: center;
+
+    color: #8b1e3f;
+
+    margin-bottom: 10px;
+}
+
+
+.registration-box > p {
+
+    text-align: center;
+
+    margin-bottom: 25px;
+}
+
+
+.registration-box label {
+
+    display: block;
+
+    margin-top: 15px;
+
+    margin-bottom: 6px;
+
+    font-weight: bold;
+}
+
+
+.registration-box input,
+.registration-box select,
+.registration-box textarea {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 6px;
+
+    font-size: 15px;
+
+    font-family: inherit;
+}
+
+
+.registration-box textarea {
+
+    resize: vertical;
+}
+
+
+.registration-box button,
+.login-box button {
+
+    width: 100%;
+
+    margin-top: 25px;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #8b1e3f;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+.registration-box button:hover,
+.login-box button:hover {
+
+    background: #6d1731;
+}
+
+
+.login-text,
+.register-text {
+
+    margin-top: 20px;
+
+    text-align: center;
+}
+
+
+.login-text a,
+.register-text a {
+
+    color: #8b1e3f;
+
+    font-weight: bold;
+}
+
+
+/* ================================
+   LOGIN
+================================ */
+
+.login-section {
+
+    min-height: 90vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 30px;
+
+    background: #fff5f7;
+}
+
+
+.login-box {
+
+    width: 100%;
+
+    max-width: 450px;
+
+    padding: 40px;
+
+    background: white;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 25px
+        rgba(0,0,0,0.1);
+}
+
+
+.login-box h1 {
+
+    text-align: center;
+
+    color: #8b1e3f;
+
+    margin-bottom: 10px;
+}
+
+
+.login-box > p {
+
+    text-align: center;
+
+    margin-bottom: 25px;
+}
+
+
+.login-box label {
+
+    display: block;
+
+    margin-top: 15px;
+
+    margin-bottom: 6px;
+
+    font-weight: bold;
+}
+
+
+.login-box input {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 6px;
+
+    font-size: 15px;
+}
+
+
+/* ================================
+   PROFILE
+================================ */
+
+.profile-section {
+
+    min-height: 90vh;
+
+    padding: 70px 8%;
+
+    background: #fff5f7;
+}
+
+
+.profile-card {
+
+    max-width: 850px;
+
+    margin: auto;
+
+    padding: 40px;
+
+    background: white;
+
+    border-radius: 15px;
+
+    display: flex;
+
+    gap: 40px;
+
+    align-items: center;
+
+    box-shadow:
+        0 5px 25px
+        rgba(0,0,0,0.1);
+}
+
+
+.profile-photo {
+
+    text-align: center;
+}
+
+
+.photo-placeholder {
+
+    width: 180px;
+
+    height: 180px;
+
+    border-radius: 50%;
+
+    background: #f1d7df;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 80px;
+}
+
+
+.profile-details h1 {
+
+    color: #8b1e3f;
+
+    margin-bottom: 15px;
+}
+
+
+.profile-details h2 {
+
+    margin-bottom: 15px;
+}
+
+
+.profile-details p {
+
+    margin: 8px 0;
+}
+
+
+.profile-details button {
+
+    margin-top: 20px;
+
+    padding: 12px 25px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #8b1e3f;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+
+/* ================================
+   SEARCH
+================================ */
+
+.search-section {
+
+    min-height: 90vh;
+
+    padding: 60px 7%;
+
+    text-align: center;
+
+    background: #fff5f7;
+}
+
+
+.search-section h1 {
+
+    color: #8b1e3f;
+
+    font-size: 38px;
+}
+
+
+.search-box {
+
+    max-width: 1000px;
+
+    margin: 30px auto;
+
+    padding: 25px;
+
+    background: white;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    box-shadow:
+        0 5px 20px
+        rgba(0,0,0,0.08);
+}
+
+
+.search-box input,
+.search-box select {
+
+    padding: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 6px;
+}
+
+
+.search-box button {
+
+    padding: 12px 25px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #8b1e3f;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+
+.profiles-container {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+
+    margin-top: 40px;
+}
+
+
+.match-card {
+
+    width: 280px;
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 20px
+        rgba(0,0,0,0.08);
+}
+
+
+.match-photo {
+
+    width: 130px;
+
+    height: 130px;
+
+    margin: auto;
+
+    border-radius: 50%;
+
+    background: #f1d7df;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 60px;
+}
+
+
+.match-card h2 {
+
+    margin: 15px 0;
+
+    color: #8b1e3f;
+}
+
+
+.match-card button {
+
+    margin-top: 15px;
+
+    padding: 10px 20px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #8b1e3f;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 768px) {
+
+    .navbar {
+
+        flex-direction: column;
+
+        gap: 15px;
+
+    }
+
+
+    .nav-links {
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 36px;
+
+    }
+
+
+    .hero p {
+
+        font-size: 17px;
+
+    }
+
+
+    .profile-card {
+
+        flex-direction: column;
+
+        text-align: center;
+
+    }
+
+
+    .search-box {
+
+        flex-direction: column;
+
+    }
+
+
+    .search-box input,
+    .search-box select,
+    .search-box button {
+
+        width: 100%;
+
+    }
+
+}
