@@ -1,65 +1,142 @@
-// ================================
-// SUSHMA MATRIMONY
-// Main JavaScript File
-// ================================
+// Firebase
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.7.1/firebase-app.js";
+
+import {
+    getAuth,
+    createUserWithEmailAndPassword,
+    updateProfile
+} from "https://www.gstatic.com/firebasejs/12.7.1/firebase-auth.js";
 
 
-// Registration Form
+// --------------------------------------------------
+// FIREBASE CONFIGURATION
+// --------------------------------------------------
+
+const firebaseConfig = {
+
+    apiKey: "AIzaSyB1wp-BPNe8KCYuBHch6oJOjt7UkHN7bFA",
+
+    authDomain: "sushma-matrimony.firebaseapp.com",
+
+    projectId: "sushma-matrimony",
+
+    storageBucket: "sushma-matrimony.firebasestorage.app",
+
+    messagingSenderId: "922813961896",
+
+    appId: "1:922813961896:web:8e340b4980dc2c7bbfd49d",
+
+    measurementId: "G-25PRFK5SGD"
+};
+
+
+// --------------------------------------------------
+// INITIALIZE FIREBASE
+// --------------------------------------------------
+
+const app = initializeApp(firebaseConfig);
+
+const auth = getAuth(app);
+
+
+// --------------------------------------------------
+// REGISTRATION
+// --------------------------------------------------
 
 const registrationForm =
     document.getElementById("registrationForm");
 
+
 if (registrationForm) {
 
-    registrationForm.addEventListener(
-        "submit",
-        function(event) {
+    registrationForm.addEventListener("submit", async function(event) {
 
-            event.preventDefault();
-
-            const name =
-                document.getElementById("name").value;
-
-            const email =
-                document.getElementById("email").value;
-
-            const mobile =
-                document.getElementById("mobile").value;
-
-            const password =
-                document.getElementById("password").value;
-
-            const gender =
-                document.getElementById("gender").value;
-
-            const dob =
-                document.getElementById("dob").value;
-
-            const city =
-                document.getElementById("city").value;
-
-            const religion =
-                document.getElementById("religion").value;
-
-            const education =
-                document.getElementById("education").value;
-
-            const occupation =
-                document.getElementById("occupation").value;
-
-            const about =
-                document.getElementById("about").value;
+        event.preventDefault();
 
 
-            const user = {
+        // Get form values
+
+        const name =
+            document.getElementById("name").value.trim();
+
+        const email =
+            document.getElementById("email").value.trim();
+
+        const mobile =
+            document.getElementById("mobile").value.trim();
+
+        const password =
+            document.getElementById("password").value;
+
+        const gender =
+            document.getElementById("gender").value;
+
+        const dob =
+            document.getElementById("dob").value;
+
+        const city =
+            document.getElementById("city").value.trim();
+
+        const religion =
+            document.getElementById("religion").value;
+
+        const education =
+            document.getElementById("education").value.trim();
+
+        const occupation =
+            document.getElementById("occupation").value.trim();
+
+        const about =
+            document.getElementById("about").value.trim();
+
+
+        // Check password
+
+        if (password.length < 6) {
+
+            alert("Password must contain at least 6 characters.");
+
+            return;
+        }
+
+
+        try {
+
+            // Create Firebase account
+
+            const userCredential =
+                await createUserWithEmailAndPassword(
+                    auth,
+                    email,
+                    password
+                );
+
+
+            const user = userCredential.user;
+
+
+            // Set user's display name
+
+            await updateProfile(user, {
+
+                displayName: name
+
+            });
+
+
+            // Save temporary profile information
+            // in browser storage for now.
+            // We will move this to Firestore next.
+
+            const profileData = {
+
+                uid: user.uid,
 
                 name: name,
 
                 email: email,
 
                 mobile: mobile,
-
-                password: password,
 
                 gender: gender,
 
@@ -78,216 +155,53 @@ if (registrationForm) {
             };
 
 
-            // Temporary storage
-            // Firebase will replace this later.
-
             localStorage.setItem(
-                "sushmaUser",
-                JSON.stringify(user)
+                "sushmaProfile",
+                JSON.stringify(profileData)
             );
 
 
             alert(
-                "Registration successful! Welcome to Sushma Matrimony."
+                "Registration successful! Welcome to Sushma Matrimony ❤️"
             );
 
 
-            window.location.href =
-                "profile.html";
+            // Go to profile page
 
-        }
-    );
-
-}
+            window.location.href = "profile.html";
 
 
-// ================================
-// Login
-// ================================
+        } catch (error) {
 
-const loginForm =
-    document.getElementById("loginForm");
-
-if (loginForm) {
-
-    loginForm.addEventListener(
-        "submit",
-        function(event) {
-
-            event.preventDefault();
+            console.error(error);
 
 
-            const email =
-                document.getElementById("loginEmail").value;
-
-            const password =
-                document.getElementById("loginPassword").value;
-
-
-            const savedUser =
-                localStorage.getItem("sushmaUser");
-
-
-            if (!savedUser) {
+            if (error.code === "auth/email-already-in-use") {
 
                 alert(
-                    "No account found. Please register first."
+                    "This email is already registered. Please login."
                 );
 
-                return;
-            }
+            } else if (error.code === "auth/invalid-email") {
 
+                alert(
+                    "Please enter a valid email address."
+                );
 
-            const user =
-                JSON.parse(savedUser);
+            } else if (error.code === "auth/weak-password") {
 
-
-            if (
-                email === user.email &&
-                password === user.password
-            ) {
-
-                alert("Login successful!");
-
-                window.location.href =
-                    "profile.html";
+                alert(
+                    "Password is too weak. Use at least 6 characters."
+                );
 
             } else {
 
                 alert(
-                    "Incorrect email or password."
+                    "Registration failed: " + error.message
                 );
-
             }
-
         }
-    );
 
-}
-
-
-// ================================
-// Load Profile
-// ================================
-
-const savedUser =
-    localStorage.getItem("sushmaUser");
-
-
-if (savedUser) {
-
-    const user =
-        JSON.parse(savedUser);
-
-
-    const profileName =
-        document.getElementById("profileName");
-
-    const profileCity =
-        document.getElementById("profileCity");
-
-    const profileEducation =
-        document.getElementById("profileEducation");
-
-    const profileOccupation =
-        document.getElementById("profileOccupation");
-
-
-    if (profileName) {
-
-        profileName.textContent =
-            user.name;
-
-    }
-
-
-    if (profileCity) {
-
-        profileCity.textContent =
-            user.city;
-
-    }
-
-
-    if (profileEducation) {
-
-        profileEducation.textContent =
-            user.education;
-
-    }
-
-
-    if (profileOccupation) {
-
-        profileOccupation.textContent =
-            user.occupation;
-
-    }
-
-}
-
-
-// ================================
-// Logout
-// ================================
-
-function logout() {
-
-    alert("You have been logged out.");
-
-    window.location.href =
-        "index.html";
-
-}
-
-
-// ================================
-// Edit Profile
-// ================================
-
-function editProfile() {
-
-    window.location.href =
-        "register.html";
-
-}
-
-
-// ================================
-// Search Profiles
-// ================================
-
-function searchProfiles() {
-
-    const city =
-        document.getElementById("searchCity").value;
-
-
-    if (city === "") {
-
-        alert(
-            "Please enter a city to search."
-        );
-
-        return;
-    }
-
-
-    alert(
-        "Searching for matches in " + city
-    );
-
-}
-
-
-// ================================
-// Send Interest
-// ================================
-
-function sendInterest() {
-
-    alert(
-        "Interest sent successfully ❤️"
-    );
+    });
 
 }
