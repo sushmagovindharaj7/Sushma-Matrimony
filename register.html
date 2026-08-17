@@ -1,24 +1,19 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Register - Sushma Matrimony</title>
 
-    <link rel="stylesheet"
-          href="css/style.css">
-
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
-
     <nav class="navbar">
 
         <div class="logo">
@@ -26,17 +21,11 @@
         </div>
 
         <div class="nav-links">
-
             <a href="index.html">Home</a>
-
-            <a href="login.html">
-                Login
-            </a>
-
+            <a href="login.html">Login</a>
         </div>
 
     </nav>
-
 </header>
 
 
@@ -140,10 +129,21 @@
                     Select Religion
                 </option>
 
-                <option>Hindu</option>
-                <option>Christian</option>
-                <option>Muslim</option>
-                <option>Other</option>
+                <option value="Hindu">
+                    Hindu
+                </option>
+
+                <option value="Christian">
+                    Christian
+                </option>
+
+                <option value="Muslim">
+                    Muslim
+                </option>
+
+                <option value="Other">
+                    Other
+                </option>
 
             </select>
 
@@ -171,8 +171,8 @@
             <textarea
                 id="about"
                 rows="4"
-                placeholder="Tell us about yourself">
-            </textarea>
+                placeholder="Tell us about yourself"
+            ></textarea>
 
 
             <button type="submit">
@@ -197,7 +197,8 @@
 </section>
 
 
-<script src="js/script.js"></script>
+<!-- Firebase + Website JavaScript -->
+<script type="module" src="script.js"></script>
 
 </body>
 
