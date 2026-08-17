@@ -1223,3 +1223,13 @@ footer hr {
     }
 
 }
+
+.contact-card a {
+    color: #8b1e3f;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact-card a:hover {
+    text-decoration: underline;
+}
