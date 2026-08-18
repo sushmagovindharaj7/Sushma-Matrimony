@@ -2012,3 +2012,776 @@ body {
     }
 
 }
+
+/* =========================================
+   SUSHMA MATRIMONY - LOGIN PAGE
+   ========================================= */
+
+
+/* Main Login Page */
+
+.login-page {
+    margin: 0;
+    min-height: 100vh;
+
+    font-family: 'Poppins', sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(55, 20, 45, 0.95),
+            rgba(126, 45, 82, 0.88),
+            rgba(245, 196, 210, 0.75)
+        );
+
+    color: #3c1f2d;
+}
+
+
+/* Navbar */
+
+.login-page .navbar {
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 18px 6%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid rgba(255,255,255,0.25);
+
+    position: relative;
+
+    z-index: 10;
+}
+
+
+.login-page .logo {
+
+    color: white;
+
+    font-size: 24px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.5px;
+}
+
+
+.login-page .nav-links {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+}
+
+
+.login-page .nav-links a {
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+
+.login-page .nav-links a:hover {
+
+    color: #ffd6e4;
+
+}
+
+
+.login-page .register-btn {
+
+    padding: 10px 22px;
+
+    border-radius: 25px;
+
+    background: white;
+
+    color: #9b3d68 !important;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+
+/* Login Section */
+
+.login-section {
+
+    min-height: calc(100vh - 80px);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 55px 20px;
+
+    box-sizing: border-box;
+}
+
+
+/* Main Card */
+
+.login-container {
+
+    width: 100%;
+
+    max-width: 1050px;
+
+    min-height: 600px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    border-radius: 30px;
+
+    overflow: hidden;
+
+    background: rgba(255,255,255,0.96);
+
+    box-shadow:
+        0 30px 70px rgba(0,0,0,0.35),
+        0 10px 30px rgba(0,0,0,0.15);
+
+    animation: loginAppear 1s ease;
+}
+
+
+@keyframes loginAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(40px) scale(0.97);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0) scale(1);
+
+    }
+
+}
+
+
+/* =========================================
+   LEFT IMAGE
+   ========================================= */
+
+.login-image {
+
+    position: relative;
+
+    min-height: 600px;
+
+    background-image:
+        linear-gradient(
+            rgba(62, 17, 43, 0.38),
+            rgba(120, 34, 76, 0.60)
+        ),
+        url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1000&q=85");
+
+    background-size: cover;
+
+    background-position: center;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    overflow: hidden;
+}
+
+
+/* Image zoom effect */
+
+.login-image::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at center,
+            transparent 20%,
+            rgba(40, 10, 30, 0.35) 100%
+        );
+
+}
+
+
+.login-image:hover {
+
+    background-size: 105%;
+    transition: background-size 1s ease;
+}
+
+
+/* Image Text */
+
+.image-overlay {
+
+    position: relative;
+
+    z-index: 2;
+
+    text-align: center;
+
+    color: white;
+
+    padding: 40px;
+
+}
+
+
+.heart-symbol {
+
+    width: 70px;
+
+    height: 70px;
+
+    margin: 0 auto 15px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: rgba(255,255,255,0.18);
+
+    backdrop-filter: blur(10px);
+
+    font-size: 35px;
+
+    color: #ffd5e2;
+
+    border: 1px solid rgba(255,255,255,0.35);
+
+    animation: heartbeat 2s infinite;
+}
+
+
+@keyframes heartbeat {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.12);
+    }
+
+}
+
+
+/* Balmoral-style heading */
+
+.balmoral {
+
+    font-family: 'Balmoral', 'Great Vibes', cursive;
+
+    font-size: 72px;
+
+    font-weight: 400;
+
+    margin: 5px 0;
+
+    line-height: 1;
+
+    text-shadow:
+        0 4px 15px rgba(0,0,0,0.4);
+}
+
+
+.image-overlay h2 {
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 25px;
+
+    letter-spacing: 7px;
+
+    text-transform: uppercase;
+
+    margin: 10px 0 25px;
+
+}
+
+
+.image-overlay p {
+
+    max-width: 350px;
+
+    margin: auto;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    color: #fff1f6;
+}
+
+
+/* =========================================
+   RIGHT LOGIN FORM
+   ========================================= */
+
+.login-form-box {
+
+    padding: 60px 55px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #fff6f9
+        );
+}
+
+
+/* Heading */
+
+.login-heading {
+
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+
+.small-heart {
+
+    display: block;
+
+    font-size: 25px;
+
+    color: #b83f70;
+
+    margin-bottom: 5px;
+}
+
+
+.login-heading h1 {
+
+    margin: 0;
+
+    font-size: 34px;
+
+    color: #492337;
+
+    font-weight: 600;
+}
+
+
+.login-heading p {
+
+    color: #8a6877;
+
+    font-size: 14px;
+
+    margin-top: 8px;
+}
+
+
+/* Input */
+
+.input-group {
+
+    margin-bottom: 20px;
+}
+
+
+.input-group label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #54263b;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+.input-wrapper {
+
+    position: relative;
+}
+
+
+.input-icon {
+
+    position: absolute;
+
+    left: 17px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    font-size: 17px;
+
+    opacity: 0.7;
+}
+
+
+.input-wrapper input {
+
+    width: 100%;
+
+    height: 52px;
+
+    box-sizing: border-box;
+
+    padding: 0 18px 0 48px;
+
+    border: 1px solid #ead3dc;
+
+    border-radius: 14px;
+
+    outline: none;
+
+    background: #fff;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+
+.input-wrapper input:focus {
+
+    border-color: #b63f70;
+
+    box-shadow:
+        0 0 0 4px rgba(182,63,112,0.10);
+
+}
+
+
+/* Login options */
+
+.login-options {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin: 5px 0 25px;
+
+    font-size: 12px;
+}
+
+
+.remember-me {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    color: #765564;
+}
+
+
+.login-options a {
+
+    text-decoration: none;
+
+    color: #a73567;
+
+    font-weight: 600;
+}
+
+
+.login-options a:hover {
+
+    text-decoration: underline;
+
+}
+
+
+/* Login Button */
+
+.login-submit {
+
+    width: 100%;
+
+    height: 54px;
+
+    border: none;
+
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #8f2858,
+            #c34d7c
+        );
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    font-family: 'Poppins', sans-serif;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 25px rgba(143,40,88,0.30);
+
+    transition: 0.3s;
+}
+
+
+.login-submit span {
+
+    margin-left: 10px;
+
+    font-size: 20px;
+}
+
+
+.login-submit:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 15px 30px rgba(143,40,88,0.40);
+}
+
+
+.login-submit:active {
+
+    transform: translateY(0);
+
+}
+
+
+/* Create Account */
+
+.create-account {
+
+    text-align: center;
+
+    margin-top: 28px;
+
+    color: #8a6877;
+
+    font-size: 13px;
+}
+
+
+.create-account p {
+
+    margin-bottom: 5px;
+}
+
+
+.create-account a {
+
+    color: #a73567;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+}
+
+
+.create-account a:hover {
+
+    text-decoration: underline;
+}
+
+
+/* Bottom Hearts */
+
+.login-decoration {
+
+    text-align: center;
+
+    margin-top: 25px;
+
+    letter-spacing: 12px;
+
+    color: #e2a3b9;
+
+    font-size: 12px;
+}
+
+
+/* Footer */
+
+.login-footer {
+
+    text-align: center;
+
+    padding: 20px;
+
+    background: rgba(40,10,30,0.45);
+
+    color: #ffeaf1;
+
+    font-size: 12px;
+
+}
+
+
+.login-footer p {
+
+    margin: 4px;
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVE
+   ========================================= */
+
+@media (max-width: 850px) {
+
+    .login-container {
+
+        grid-template-columns: 1fr;
+
+        max-width: 550px;
+
+    }
+
+
+    .login-image {
+
+        min-height: 350px;
+
+    }
+
+
+    .login-form-box {
+
+        padding: 45px 30px;
+
+    }
+
+
+    .balmoral {
+
+        font-size: 60px;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .login-page .navbar {
+
+        padding: 15px 20px;
+
+    }
+
+
+    .login-page .logo {
+
+        font-size: 18px;
+
+    }
+
+
+    .login-page .nav-links {
+
+        gap: 10px;
+
+    }
+
+
+    .login-page .nav-links a:not(.register-btn) {
+
+        display: none;
+
+    }
+
+
+    .login-section {
+
+        padding: 25px 12px;
+
+    }
+
+
+    .login-image {
+
+        min-height: 300px;
+
+    }
+
+
+    .login-form-box {
+
+        padding: 35px 22px;
+
+    }
+
+
+    .login-heading h1 {
+
+        font-size: 28px;
+
+    }
+
+
+    .balmoral {
+
+        font-size: 55px;
+
+    }
+
+}
