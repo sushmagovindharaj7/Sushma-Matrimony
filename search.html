@@ -8,14 +8,28 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-    <title>Find Matches - Sushma Matrimony</title>
+    <title>Find Matches | Sushma Matrimony</title>
 
-    <link rel="stylesheet"
-          href="css/style.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Elegant Google Fonts -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
 
 </head>
 
+
 <body>
+
+
+<!-- ================= NAVBAR ================= -->
 
 <header>
 
@@ -25,14 +39,33 @@
             💍 Sushma Matrimony
         </div>
 
+
         <div class="nav-links">
 
             <a href="index.html">
                 Home
             </a>
 
-            <a href="profile.html">
-                My Profile
+            <a href="index.html#about">
+                About
+            </a>
+
+            <a href="search.html"
+               class="active">
+                Find Matches
+            </a>
+
+            <a href="index.html#contact">
+                Contact
+            </a>
+
+            <a href="login.html">
+                Login
+            </a>
+
+            <a href="register.html"
+               class="nav-register">
+                Register
             </a>
 
         </div>
@@ -42,113 +75,607 @@
 </header>
 
 
-<section class="search-section">
 
-    <h1>Find Your Match</h1>
+<!-- ================= PAGE HERO ================= -->
 
-    <p>
-        Search for profiles that match your preferences.
-    </p>
+<section class="matches-hero">
 
+    <div class="matches-hero-content">
 
-    <div class="search-box">
-
-        <select id="searchGender">
-
-            <option value="">
-                Gender
-            </option>
-
-            <option value="Male">
-                Male
-            </option>
-
-            <option value="Female">
-                Female
-            </option>
-
-        </select>
-
-
-        <input
-            type="number"
-            id="minAge"
-            placeholder="Min Age"
-        >
-
-
-        <input
-            type="number"
-            id="maxAge"
-            placeholder="Max Age"
-        >
-
-
-        <input
-            type="text"
-            id="searchCity"
-            placeholder="City"
-        >
-
-
-        <button onclick="searchProfiles()">
-            Search
-        </button>
-
-    </div>
-
-
-    <div id="profilesContainer"
-         class="profiles-container">
-
-
-        <div class="match-card">
-
-            <div class="match-photo">
-                👩
-            </div>
-
-            <h2>Sample Profile</h2>
-
-            <p>24 years</p>
-
-            <p>📍 Coimbatore</p>
-
-            <p>🎓 B.E Computer Science</p>
-
-            <button onclick="sendInterest()">
-                ❤️ Send Interest
-            </button>
-
+        <div class="hero-small-title">
+            ❤️ SUSHMA MATRIMONY
         </div>
 
+        <h1>
+            Find Someone
+            <span>Special</span>
+        </h1>
 
-        <div class="match-card">
-
-            <div class="match-photo">
-                👨
-            </div>
-
-            <h2>Sample Profile</h2>
-
-            <p>27 years</p>
-
-            <p>📍 Chennai</p>
-
-            <p>💼 Software Engineer</p>
-
-            <button onclick="sendInterest()">
-                ❤️ Send Interest
-            </button>
-
-        </div>
+        <p>
+            Discover meaningful connections
+            and meet people who could become
+            a beautiful part of your journey.
+        </p>
 
     </div>
 
 </section>
 
 
-<script src="js/script.js"></script>
+
+<!-- ================= SEARCH AREA ================= -->
+
+<section class="search-section">
+
+    <div class="search-heading">
+
+        <span>
+            FIND YOUR MATCH
+        </span>
+
+        <h2>
+            Search Compatible Profiles
+        </h2>
+
+        <p>
+            Choose your preferences and
+            discover potential life partners.
+        </p>
+
+    </div>
+
+
+    <div class="search-box">
+
+        <div class="input-group">
+
+            <label>
+                Looking For
+            </label>
+
+            <select id="genderFilter">
+
+                <option value="">
+                    Select Gender
+                </option>
+
+                <option value="Male">
+                    Male
+                </option>
+
+                <option value="Female">
+                    Female
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div class="input-group">
+
+            <label>
+                City
+            </label>
+
+            <input
+                type="text"
+                id="cityFilter"
+                placeholder="Enter city"
+            >
+
+        </div>
+
+
+        <div class="input-group">
+
+            <label>
+                Religion
+            </label>
+
+            <select id="religionFilter">
+
+                <option value="">
+                    Any Religion
+                </option>
+
+                <option value="Hindu">
+                    Hindu
+                </option>
+
+                <option value="Christian">
+                    Christian
+                </option>
+
+                <option value="Muslim">
+                    Muslim
+                </option>
+
+                <option value="Other">
+                    Other
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <button
+            class="search-button"
+            onclick="filterProfiles()">
+
+            🔎 Search Matches
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= PROFILE SECTION ================= -->
+
+<section class="profiles-section">
+
+    <div class="search-heading">
+
+        <span>
+            DISCOVER
+        </span>
+
+        <h2>
+            Featured Profiles
+        </h2>
+
+        <p>
+            Meet some of the people looking
+            for their perfect life partner.
+        </p>
+
+    </div>
+
+
+    <div class="profiles-container">
+
+
+        <!-- ================= PROFILE 1 ================= -->
+
+        <div class="profile-card"
+             data-gender="Female"
+             data-city="Chennai"
+             data-religion="Hindu">
+
+
+            <div class="profile-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=700&q=85"
+                    alt="Profile">
+
+                <span class="online">
+                    ● Online
+                </span>
+
+            </div>
+
+
+            <div class="profile-content">
+
+                <h3>
+                    Ananya, 24
+                </h3>
+
+                <p class="profile-location">
+                    📍 Chennai
+                </p>
+
+                <div class="profile-details">
+
+                    <span>
+                        🎓 B.E Computer Science
+                    </span>
+
+                    <span>
+                        💼 Software Engineer
+                    </span>
+
+                    <span>
+                        🕉️ Hindu
+                    </span>
+
+                </div>
+
+
+                <p class="profile-about">
+
+                    Friendly, ambitious and
+                    family-oriented. Looking for
+                    a caring and understanding partner.
+
+                </p>
+
+
+                <button class="interest-btn"
+                        onclick="sendInterest('Ananya')">
+
+                    ❤️ Send Interest
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================= PROFILE 2 ================= -->
+
+        <div class="profile-card"
+             data-gender="Male"
+             data-city="Coimbatore"
+             data-religion="Hindu">
+
+
+            <div class="profile-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=700&q=85"
+                    alt="Profile">
+
+                <span class="online">
+                    ● Online
+                </span>
+
+            </div>
+
+
+            <div class="profile-content">
+
+                <h3>
+                    Arjun, 27
+                </h3>
+
+                <p class="profile-location">
+                    📍 Coimbatore
+                </p>
+
+                <div class="profile-details">
+
+                    <span>
+                        🎓 M.Tech
+                    </span>
+
+                    <span>
+                        💼 Software Developer
+                    </span>
+
+                    <span>
+                        🕉️ Hindu
+                    </span>
+
+                </div>
+
+
+                <p class="profile-about">
+
+                    Calm, responsible and passionate
+                    about technology. Believes in
+                    family values and mutual respect.
+
+                </p>
+
+
+                <button class="interest-btn"
+                        onclick="sendInterest('Arjun')">
+
+                    ❤️ Send Interest
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================= PROFILE 3 ================= -->
+
+        <div class="profile-card"
+             data-gender="Female"
+             data-city="Bangalore"
+             data-religion="Christian">
+
+
+            <div class="profile-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=700&q=85"
+                    alt="Profile">
+
+                <span class="online">
+                    ● Online
+                </span>
+
+            </div>
+
+
+            <div class="profile-content">
+
+                <h3>
+                    Sarah, 25
+                </h3>
+
+                <p class="profile-location">
+                    📍 Bangalore
+                </p>
+
+                <div class="profile-details">
+
+                    <span>
+                        🎓 MBA
+                    </span>
+
+                    <span>
+                        💼 Business Analyst
+                    </span>
+
+                    <span>
+                        ✝️ Christian
+                    </span>
+
+                </div>
+
+
+                <p class="profile-about">
+
+                    Cheerful, independent and
+                    career-focused. Looking for
+                    a supportive and genuine partner.
+
+                </p>
+
+
+                <button class="interest-btn"
+                        onclick="sendInterest('Sarah')">
+
+                    ❤️ Send Interest
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================= PROFILE 4 ================= -->
+
+        <div class="profile-card"
+             data-gender="Male"
+             data-city="Chennai"
+             data-religion="Muslim">
+
+
+            <div class="profile-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=700&q=85"
+                    alt="Profile">
+
+                <span class="online">
+                    ● Online
+                </span>
+
+            </div>
+
+
+            <div class="profile-content">
+
+                <h3>
+                    Rahman, 28
+                </h3>
+
+                <p class="profile-location">
+                    📍 Chennai
+                </p>
+
+                <div class="profile-details">
+
+                    <span>
+                        🎓 B.Tech
+                    </span>
+
+                    <span>
+                        💼 Project Manager
+                    </span>
+
+                    <span>
+                        ☪️ Muslim
+                    </span>
+
+                </div>
+
+
+                <p class="profile-about">
+
+                    Positive, respectful and
+                    family-oriented. Looking for
+                    a kind-hearted life partner.
+
+                </p>
+
+
+                <button class="interest-btn"
+                        onclick="sendInterest('Rahman')">
+
+                    ❤️ Send Interest
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= CTA ================= -->
+
+<section class="matches-cta">
+
+    <div>
+
+        <h2>
+            Haven't Created Your Profile Yet? ❤️
+        </h2>
+
+        <p>
+            Create your profile and let
+            your special journey begin.
+        </p>
+
+        <a href="register.html"
+           class="cta-register">
+
+            Create My Profile
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-logo">
+        💍 Sushma Matrimony
+    </div>
+
+    <p>
+        Connecting hearts,
+        creating beautiful beginnings.
+    </p>
+
+    <div class="footer-links">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="search.html">
+            Find Matches
+        </a>
+
+        <a href="login.html">
+            Login
+        </a>
+
+        <a href="register.html">
+            Register
+        </a>
+
+    </div>
+
+    <hr>
+
+    <p class="copyright">
+        © 2026 Sushma Matrimony.
+        All Rights Reserved.
+    </p>
+
+</footer>
+
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+function filterProfiles() {
+
+    const gender =
+        document.getElementById("genderFilter").value;
+
+    const city =
+        document.getElementById("cityFilter")
+        .value
+        .toLowerCase();
+
+    const religion =
+        document.getElementById("religionFilter").value;
+
+
+    const profiles =
+        document.querySelectorAll(".profile-card");
+
+
+    profiles.forEach(function(profile) {
+
+        const profileGender =
+            profile.dataset.gender;
+
+        const profileCity =
+            profile.dataset.city.toLowerCase();
+
+        const profileReligion =
+            profile.dataset.religion;
+
+
+        const genderMatch =
+            !gender ||
+            profileGender === gender;
+
+
+        const cityMatch =
+            !city ||
+            profileCity.includes(city);
+
+
+        const religionMatch =
+            !religion ||
+            profileReligion === religion;
+
+
+        if (
+            genderMatch &&
+            cityMatch &&
+            religionMatch
+        ) {
+
+            profile.style.display = "block";
+
+        } else {
+
+            profile.style.display = "none";
+
+        }
+
+    });
+
+}
+
+
+function sendInterest(name) {
+
+    alert(
+        "❤️ Your interest has been sent to "
+        + name
+        + "!"
+    );
+
+}
+
+</script>
+
 
 </body>
 
