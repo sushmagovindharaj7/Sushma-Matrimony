@@ -2,100 +2,230 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Login - Sushma Matrimony</title>
 
-    <link rel="stylesheet"
-          href="css/style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Your CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="login-page">
 
-<header>
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
 
-    <nav class="navbar">
+            <div class="logo">
+                💍 Sushma Matrimony
+            </div>
 
-        <div class="logo">
-            💍 Sushma Matrimony
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="register.html" class="register-btn">
+                    Register
+                </a>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <!-- LOGIN SECTION -->
+
+    <section class="login-section">
+
+        <div class="login-container">
+
+            <!-- LEFT IMAGE -->
+
+            <div class="login-image">
+
+                <div class="image-overlay">
+
+                    <div class="heart-symbol">
+                        ♥
+                    </div>
+
+                    <h1 class="balmoral">
+                        Sushma
+                    </h1>
+
+                    <h2>Matrimony</h2>
+
+                    <p>
+                        Where two hearts meet
+                        and beautiful journeys begin.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT LOGIN FORM -->
+
+            <div class="login-form-box">
+
+                <div class="login-heading">
+
+                    <span class="small-heart">♥</span>
+
+                    <h1>Welcome Back</h1>
+
+                    <p>
+                        Login to your Sushma Matrimony account
+                    </p>
+
+                </div>
+
+
+                <form id="loginForm">
+
+                    <!-- Email -->
+
+                    <div class="input-group">
+
+                        <label for="email">
+                            Email Address
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <span class="input-icon">
+                                ✉
+                            </span>
+
+                            <input
+                                type="email"
+                                id="email"
+                                placeholder="Enter your email"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Password -->
+
+                    <div class="input-group">
+
+                        <label for="password">
+                            Password
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <span class="input-icon">
+                                🔒
+                            </span>
+
+                            <input
+                                type="password"
+                                id="password"
+                                placeholder="Enter your password"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Options -->
+
+                    <div class="login-options">
+
+                        <label class="remember-me">
+
+                            <input type="checkbox">
+
+                            <span>
+                                Remember me
+                            </span>
+
+                        </label>
+
+                        <a href="#">
+                            Forgot Password?
+                        </a>
+
+                    </div>
+
+
+                    <!-- Login Button -->
+
+                    <button
+                        type="submit"
+                        class="login-submit"
+                    >
+
+                        Login
+                        <span>→</span>
+
+                    </button>
+
+                </form>
+
+
+                <!-- Register -->
+
+                <div class="create-account">
+
+                    <p>
+                        Don't have an account?
+                    </p>
+
+                    <a href="register.html">
+                        Create Your Profile
+                    </a>
+
+                </div>
+
+
+                <!-- Bottom decoration -->
+
+                <div class="login-decoration">
+
+                    <span>♥</span>
+                    <span>♥</span>
+                    <span>♥</span>
+
+                </div>
+
+            </div>
+
         </div>
 
-        <div class="nav-links">
-
-            <a href="index.html">
-                Home
-            </a>
-
-            <a href="register.html">
-                Register
-            </a>
-
-        </div>
-
-    </nav>
-
-</header>
+    </section>
 
 
-<section class="login-section">
+    <!-- Footer -->
 
-    <div class="login-box">
+    <footer class="login-footer">
 
-        <h1>Welcome Back</h1>
-
-        <p>Login to your Sushma Matrimony account.</p>
-
-
-        <form id="loginForm">
-
-            <label>Email Address</label>
-
-            <input
-                type="email"
-                id="loginEmail"
-                placeholder="Enter your email"
-                required
-            >
-
-
-            <label>Password</label>
-
-            <input
-                type="password"
-                id="loginPassword"
-                placeholder="Enter your password"
-                required
-            >
-
-
-            <button type="submit">
-                Login
-            </button>
-
-        </form>
-
-
-        <p class="register-text">
-
-            Don't have an account?
-
-            <a href="register.html">
-                Create Account
-            </a>
-
+        <p>
+            © 2026 Sushma Matrimony
         </p>
 
-    </div>
+        <p>
+            Made with ♥ for beautiful beginnings
+        </p>
 
-</section>
+    </footer>
 
 
-<script src="js/script.js"></script>
+    <script src="js/script.js"></script>
 
 </body>
 
