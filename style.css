@@ -1233,3 +1233,782 @@ footer hr {
 .contact-card a:hover {
     text-decoration: underline;
 }
+
+/* =====================================================
+   FIND MATCHES PAGE
+===================================================== */
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+
+/* =====================================================
+   MATCHES HERO
+===================================================== */
+
+.matches-hero {
+
+    min-height: 430px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    position: relative;
+
+    background:
+
+        linear-gradient(
+            rgba(76, 13, 40, 0.62),
+            rgba(76, 13, 40, 0.72)
+        ),
+
+        url(
+            "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=2000&q=90"
+        );
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-attachment: fixed;
+
+}
+
+
+.matches-hero-content {
+
+    max-width: 800px;
+
+    padding: 50px;
+
+    color: white;
+
+}
+
+
+.hero-small-title {
+
+    font-size: 14px;
+
+    letter-spacing: 3px;
+
+    color: #ffd166;
+
+    font-weight: 700;
+
+    margin-bottom: 15px;
+
+}
+
+
+.matches-hero h1 {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(55px, 8vw, 90px);
+
+    line-height: 0.95;
+
+    color: white;
+
+    margin-bottom: 25px;
+
+}
+
+
+.matches-hero h1 span {
+
+    color: #ffd166;
+
+}
+
+
+.matches-hero p {
+
+    max-width: 650px;
+
+    margin: auto;
+
+    color: #fff0f5;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+}
+
+
+/* =====================================================
+   SEARCH SECTION
+===================================================== */
+
+.search-section {
+
+    background:
+
+        radial-gradient(
+            circle at top left,
+            #ffe3ec,
+            transparent 35%
+        ),
+
+        #fff8fb;
+
+}
+
+
+.search-heading {
+
+    max-width: 800px;
+
+    margin:
+        0 auto 40px;
+
+    text-align: center;
+
+}
+
+
+.search-heading > span {
+
+    color: #a52b52;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+}
+
+
+.search-heading h2 {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 45px;
+
+    color: #7d1838;
+
+    margin:
+        10px 0;
+
+}
+
+
+.search-heading p {
+
+    color: #765967;
+
+    line-height: 1.8;
+
+}
+
+
+/* =====================================================
+   SEARCH BOX
+===================================================== */
+
+.search-box {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 30px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr)
+        auto;
+
+    gap: 18px;
+
+    align-items: end;
+
+    background:
+        rgba(255,255,255,0.85);
+
+    backdrop-filter:
+        blur(20px);
+
+    border-radius: 25px;
+
+    border:
+        1px solid
+        rgba(139,30,63,0.12);
+
+    box-shadow:
+        0 20px 55px
+        rgba(94,25,50,0.12);
+
+}
+
+
+.input-group {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+}
+
+
+.input-group label {
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    color: #7d1838;
+
+}
+
+
+.input-group input,
+.input-group select {
+
+    width: 100%;
+
+    padding:
+        14px 15px;
+
+    border:
+        1px solid #ead0da;
+
+    border-radius: 12px;
+
+    outline: none;
+
+    background: white;
+
+    color: #542235;
+
+    font-family:
+        "Poppins",
+        sans-serif;
+
+    transition: 0.3s;
+
+}
+
+
+.input-group input:focus,
+.input-group select:focus {
+
+    border-color: #a52b52;
+
+    box-shadow:
+        0 0 0 4px
+        rgba(165,43,82,0.08);
+
+}
+
+
+.search-button {
+
+    padding:
+        14px 22px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    color: white;
+
+    font-family:
+        "Poppins",
+        sans-serif;
+
+    font-weight: 700;
+
+    background:
+        linear-gradient(
+            135deg,
+            #8b1e3f,
+            #c43d68
+        );
+
+    box-shadow:
+        0 10px 25px
+        rgba(139,30,63,0.25);
+
+    transition: 0.3s;
+
+}
+
+
+.search-button:hover {
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 15px 30px
+        rgba(139,30,63,0.35);
+
+}
+
+
+/* =====================================================
+   PROFILE SECTION
+===================================================== */
+
+.profiles-section {
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #fff,
+            #fff2f6
+        );
+
+}
+
+
+.profiles-container {
+
+    max-width: 1250px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(270px, 1fr)
+        );
+
+    gap: 30px;
+
+}
+
+
+/* =====================================================
+   PROFILE CARD
+===================================================== */
+
+.profile-card {
+
+    overflow: hidden;
+
+    border-radius: 25px;
+
+    background:
+        rgba(255,255,255,0.95);
+
+    border:
+        1px solid
+        rgba(139,30,63,0.10);
+
+    box-shadow:
+        0 18px 45px
+        rgba(88,25,48,0.12);
+
+    transition:
+        transform 0.4s,
+        box-shadow 0.4s;
+
+}
+
+
+.profile-card:hover {
+
+    transform:
+        translateY(-12px)
+        rotateX(2deg);
+
+    box-shadow:
+        0 30px 65px
+        rgba(88,25,48,0.20);
+
+}
+
+
+/* =====================================================
+   PROFILE IMAGE
+===================================================== */
+
+.profile-image {
+
+    height: 310px;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+.profile-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.6s;
+
+}
+
+
+.profile-card:hover
+.profile-image img {
+
+    transform:
+        scale(1.08);
+
+}
+
+
+.online {
+
+    position: absolute;
+
+    top: 15px;
+
+    right: 15px;
+
+    padding:
+        7px 12px;
+
+    border-radius: 20px;
+
+    background:
+        rgba(255,255,255,0.90);
+
+    color: #218838;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 5px 15px
+        rgba(0,0,0,0.15);
+
+}
+
+
+/* =====================================================
+   PROFILE CONTENT
+===================================================== */
+
+.profile-content {
+
+    padding: 25px;
+
+}
+
+
+.profile-content h3 {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 29px;
+
+    color: #7d1838;
+
+    margin-bottom: 5px;
+
+}
+
+
+.profile-location {
+
+    color: #8f6a77;
+
+    font-size: 14px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.profile-details {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+
+    margin-bottom: 18px;
+
+}
+
+
+.profile-details span {
+
+    font-size: 13px;
+
+    color: #684552;
+
+}
+
+
+.profile-about {
+
+    font-size: 14px;
+
+    color: #765967;
+
+    line-height: 1.7;
+
+    margin-bottom: 20px;
+
+}
+
+
+.interest-btn {
+
+    width: 100%;
+
+    padding:
+        13px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    color: white;
+
+    font-family:
+        "Poppins",
+        sans-serif;
+
+    font-weight: 700;
+
+    background:
+        linear-gradient(
+            135deg,
+            #8b1e3f,
+            #c43d68
+        );
+
+    transition: 0.3s;
+
+}
+
+
+.interest-btn:hover {
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 10px 25px
+        rgba(139,30,63,0.25);
+
+}
+
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.matches-cta {
+
+    padding:
+        90px 20px;
+
+    text-align: center;
+
+    color: white;
+
+    background:
+
+        linear-gradient(
+            rgba(74,12,39,0.88),
+            rgba(74,12,39,0.92)
+        ),
+
+        url(
+            "https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1800&q=85"
+        );
+
+    background-size: cover;
+
+    background-position: center;
+
+}
+
+
+.matches-cta h2 {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(35px,5vw,50px);
+
+    margin-bottom: 15px;
+
+}
+
+
+.matches-cta p {
+
+    color: #ffe8ef;
+
+    font-size: 17px;
+
+    margin-bottom: 30px;
+
+}
+
+
+.cta-register {
+
+    display: inline-block;
+
+    padding:
+        15px 32px;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    color: #8b1e3f;
+
+    background: white;
+
+    font-weight: 700;
+
+    transition: 0.3s;
+
+}
+
+
+.cta-register:hover {
+
+    transform:
+        translateY(-5px)
+        scale(1.03);
+
+    box-shadow:
+        0 15px 35px
+        rgba(0,0,0,0.25);
+
+}
+
+
+/* =====================================================
+   ACTIVE NAVIGATION
+===================================================== */
+
+.nav-links .active {
+
+    color: #8b1e3f;
+
+    background: #ffe6ef;
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .search-box {
+
+        grid-template-columns:
+            1fr 1fr;
+
+    }
+
+    .search-button {
+
+        grid-column:
+            1 / -1;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .matches-hero {
+
+        min-height: 500px;
+
+        background-attachment:
+            scroll;
+
+    }
+
+
+    .matches-hero-content {
+
+        padding: 30px 20px;
+
+    }
+
+
+    .matches-hero h1 {
+
+        font-size: 55px;
+
+    }
+
+
+    .search-box {
+
+        grid-template-columns:
+            1fr;
+
+        padding: 20px;
+
+    }
+
+
+    .search-button {
+
+        grid-column:
+            auto;
+
+    }
+
+
+    .search-heading h2 {
+
+        font-size: 36px;
+
+    }
+
+
+    .profile-image {
+
+        height: 350px;
+
+    }
+
+}
