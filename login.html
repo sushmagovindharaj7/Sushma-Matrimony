@@ -1,38 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Login - Sushma Matrimony</title>
 
-    <!-- Google Fonts -->
+    <!-- IMPORTANT: style.css is in the main GitHub folder -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Elegant script font similar to Balmoral -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-
-    <!-- Your CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ballet&family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body class="login-page">
 
-    <!-- Navigation -->
-    <header>
+    <!-- NAVBAR -->
+    <header class="login-header">
         <nav class="navbar">
 
             <div class="logo">
-                💍 Sushma Matrimony
+                💍
+                <span>Sushma Matrimony</span>
             </div>
 
             <div class="nav-links">
                 <a href="index.html">Home</a>
-                <a href="register.html" class="register-btn">
-                    Register
-                </a>
+                <a href="register.html">Register</a>
             </div>
 
         </nav>
@@ -40,73 +37,65 @@
 
 
     <!-- LOGIN SECTION -->
+    <main class="login-container">
 
-    <section class="login-section">
+        <!-- LEFT SIDE -->
+        <section class="login-image">
 
-        <div class="login-container">
+            <div class="image-overlay">
 
-            <!-- LEFT IMAGE -->
+                <div class="heart-icon">♥</div>
 
-            <div class="login-image">
+                <h1>Sushma</h1>
 
-                <div class="image-overlay">
+                <h2>Matrimony</h2>
 
-                    <div class="heart-symbol">
-                        ♥
-                    </div>
+                <p>
+                    Where two hearts meet and
+                    beautiful journeys begin.
+                </p>
 
-                    <h1 class="balmoral">
-                        Sushma
-                    </h1>
-
-                    <h2>Matrimony</h2>
-
-                    <p>
-                        Where two hearts meet
-                        and beautiful journeys begin.
-                    </p>
-
+                <div class="small-hearts">
+                    ♥ ♥ ♥
                 </div>
 
             </div>
 
+        </section>
 
-            <!-- RIGHT LOGIN FORM -->
 
-            <div class="login-form-box">
+        <!-- RIGHT SIDE -->
+        <section class="login-form-section">
 
-                <div class="login-heading">
+            <div class="login-card">
 
-                    <span class="small-heart">♥</span>
-
-                    <h1>Welcome Back</h1>
-
-                    <p>
-                        Login to your Sushma Matrimony account
-                    </p>
-
+                <div class="login-icon">
+                    💍
                 </div>
+
+                <h2>Welcome Back</h2>
+
+                <p class="login-subtitle">
+                    Login to your Sushma Matrimony account
+                </p>
 
 
                 <form id="loginForm">
 
-                    <!-- Email -->
-
+                    <!-- EMAIL -->
                     <div class="input-group">
 
-                        <label for="email">
+                        <label for="loginEmail">
                             Email Address
                         </label>
 
-                        <div class="input-wrapper">
+                        <div class="input-box">
 
-                            <span class="input-icon">
-                                ✉
-                            </span>
+                            <span>✉</span>
 
                             <input
                                 type="email"
-                                id="email"
+                                id="loginEmail"
                                 placeholder="Enter your email"
                                 required
                             >
@@ -116,23 +105,20 @@
                     </div>
 
 
-                    <!-- Password -->
-
+                    <!-- PASSWORD -->
                     <div class="input-group">
 
-                        <label for="password">
+                        <label for="loginPassword">
                             Password
                         </label>
 
-                        <div class="input-wrapper">
+                        <div class="input-box">
 
-                            <span class="input-icon">
-                                🔒
-                            </span>
+                            <span>🔒</span>
 
                             <input
                                 type="password"
-                                id="password"
+                                id="loginPassword"
                                 placeholder="Enter your password"
                                 required
                             >
@@ -142,76 +128,63 @@
                     </div>
 
 
-                    <!-- Options -->
-
+                    <!-- REMEMBER + FORGOT -->
                     <div class="login-options">
 
-                        <label class="remember-me">
+                        <label class="remember">
 
-                            <input type="checkbox">
+                            <input
+                                type="checkbox"
+                                id="rememberMe"
+                            >
 
-                            <span>
-                                Remember me
-                            </span>
+                            <span>Remember me</span>
 
                         </label>
 
-                        <a href="#">
+                        <a href="#" class="forgot">
                             Forgot Password?
                         </a>
 
                     </div>
 
 
-                    <!-- Login Button -->
-
+                    <!-- LOGIN BUTTON -->
                     <button
                         type="submit"
                         class="login-submit"
                     >
-
                         Login
                         <span>→</span>
-
                     </button>
 
                 </form>
 
 
-                <!-- Register -->
-
-                <div class="create-account">
+                <!-- REGISTER -->
+                <div class="register-section">
 
                     <p>
                         Don't have an account?
                     </p>
 
-                    <a href="register.html">
+                    <a
+                        href="register.html"
+                        class="create-profile"
+                    >
                         Create Your Profile
                     </a>
 
                 </div>
 
-
-                <!-- Bottom decoration -->
-
-                <div class="login-decoration">
-
-                    <span>♥</span>
-                    <span>♥</span>
-                    <span>♥</span>
-
-                </div>
-
             </div>
 
-        </div>
+        </section>
 
-    </section>
+    </main>
 
 
-    <!-- Footer -->
-
+    <!-- FOOTER -->
     <footer class="login-footer">
 
         <p>
@@ -225,8 +198,8 @@
     </footer>
 
 
-    <script src="js/script.js"></script>
+    <!-- FIREBASE / LOGIN JAVASCRIPT WILL GO HERE -->
+    <script src="script.js"></script>
 
 </body>
-
 </html>
