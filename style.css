@@ -2354,78 +2354,347 @@ body {
 }
 
 
-/* =========================================
-   RIGHT LOGIN FORM
-   ========================================= */
+/* =====================================================
+   SUSHMA MATRIMONY - LOGIN PAGE
+   ===================================================== */
 
-.login-form-box {
 
-    padding: 60px 55px;
+/* LOGIN PAGE BACKGROUND */
+
+.login-page {
+    margin: 0;
+    padding: 0;
+
+    min-height: 100vh;
+
+    font-family: 'Poppins', sans-serif;
+
+    background:
+        radial-gradient(circle at 10% 20%,
+        rgba(255, 210, 220, 0.45),
+        transparent 30%),
+
+        radial-gradient(circle at 90% 80%,
+        rgba(215, 180, 255, 0.35),
+        transparent 30%),
+
+        linear-gradient(
+        135deg,
+        #fff7f8,
+        #f9eef5,
+        #f5edf8
+        );
+
+    color: #3d2632;
+}
+
+
+/* =====================================================
+   NAVBAR
+   ===================================================== */
+
+.login-header {
+    position: relative;
+    z-index: 10;
+
+    background: rgba(255, 255, 255, 0.82);
+
+    backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 4px 20px rgba(80, 30, 60, 0.08);
+}
+
+
+.login-header .navbar {
+
+    width: 90%;
+    max-width: 1200px;
+
+    margin: auto;
+
+    min-height: 75px;
 
     display: flex;
 
-    flex-direction: column;
+    align-items: center;
 
-    justify-content: center;
-
-    background:
-        linear-gradient(
-            145deg,
-            #ffffff,
-            #fff6f9
-        );
+    justify-content: space-between;
 }
 
 
-/* Heading */
+.login-header .logo {
 
-.login-heading {
+    display: flex;
 
-    text-align: center;
+    align-items: center;
 
-    margin-bottom: 35px;
-}
+    gap: 8px;
 
-
-.small-heart {
-
-    display: block;
+    font-family: 'Playfair Display', serif;
 
     font-size: 25px;
 
-    color: #b83f70;
+    font-weight: 700;
 
-    margin-bottom: 5px;
+    color: #8c3154;
 }
 
 
-.login-heading h1 {
+.login-header .nav-links {
 
-    margin: 0;
+    display: flex;
 
-    font-size: 34px;
-
-    color: #492337;
-
-    font-weight: 600;
+    gap: 25px;
 }
 
 
-.login-heading p {
+.login-header .nav-links a {
 
-    color: #8a6877;
+    text-decoration: none;
+
+    color: #633246;
+
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+
+.login-header .nav-links a:hover {
+
+    color: #c04d77;
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   MAIN LOGIN CONTAINER
+   ===================================================== */
+
+.login-container {
+
+    width: 92%;
+
+    max-width: 1100px;
+
+    min-height: 650px;
+
+    margin: 55px auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    border-radius: 30px;
+
+    overflow: hidden;
+
+    background: rgba(255,255,255,0.75);
+
+    backdrop-filter: blur(20px);
+
+    box-shadow:
+        0 25px 70px rgba(80, 30, 60, 0.20);
+
+    border: 1px solid rgba(255,255,255,0.8);
+}
+
+
+/* =====================================================
+   LEFT IMAGE
+   ===================================================== */
+
+.login-image {
+
+    position: relative;
+
+    min-height: 650px;
+
+    background-image:
+
+        linear-gradient(
+            rgba(95, 25, 55, 0.25),
+            rgba(45, 15, 35, 0.65)
+        ),
+
+        url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1000&q=85");
+
+    background-size: cover;
+
+    background-position: center;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+}
+
+
+.image-overlay {
+
+    color: white;
+
+    padding: 40px;
+
+    animation: fadeIn 1.2s ease;
+}
+
+
+.heart-icon {
+
+    font-size: 42px;
+
+    margin-bottom: 10px;
+
+    animation: heartBeat 1.5s infinite;
+}
+
+
+/* SCRIPT FONT */
+
+.image-overlay h1 {
+
+    font-family: 'Ballet', cursive;
+
+    font-size: 90px;
+
+    line-height: 1;
+
+    margin: 10px 0;
+
+    text-shadow:
+        3px 4px 15px rgba(0,0,0,0.35);
+}
+
+
+.image-overlay h2 {
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 42px;
+
+    margin: 5px 0 20px;
+
+    letter-spacing: 2px;
+}
+
+
+.image-overlay p {
+
+    max-width: 400px;
+
+    margin: auto;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    color: #fff4f7;
+}
+
+
+.small-hearts {
+
+    margin-top: 30px;
+
+    letter-spacing: 10px;
+
+    font-size: 20px;
+}
+
+
+/* =====================================================
+   RIGHT LOGIN FORM
+   ===================================================== */
+
+.login-form-section {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 50px;
+}
+
+
+.login-card {
+
+    width: 100%;
+
+    max-width: 420px;
+
+    text-align: center;
+}
+
+
+.login-icon {
+
+    width: 65px;
+
+    height: 65px;
+
+    margin: auto;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f6bfd1,
+            #d99ab6
+        );
+
+    box-shadow:
+        0 10px 25px rgba(170, 70, 110, 0.25);
+}
+
+
+.login-card h2 {
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 38px;
+
+    margin: 20px 0 8px;
+
+    color: #512b3a;
+}
+
+
+.login-subtitle {
+
+    color: #866875;
+
+    margin-bottom: 35px;
 
     font-size: 14px;
-
-    margin-top: 8px;
 }
 
 
-/* Input */
+/* =====================================================
+   INPUTS
+   ===================================================== */
 
 .input-group {
 
-    margin-bottom: 20px;
+    text-align: left;
+
+    margin-bottom: 22px;
 }
 
 
@@ -2435,73 +2704,77 @@ body {
 
     margin-bottom: 8px;
 
-    color: #54263b;
+    font-weight: 600;
+
+    color: #563544;
 
     font-size: 14px;
-
-    font-weight: 600;
 }
 
 
-.input-wrapper {
+.input-box {
 
-    position: relative;
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    background: white;
+
+    border: 1px solid #e6ccd7;
+
+    border-radius: 12px;
+
+    padding: 0 15px;
+
+    transition: 0.3s;
+
+    box-shadow:
+        0 5px 15px rgba(100,40,70,0.05);
 }
 
 
-.input-icon {
+.input-box:focus-within {
 
-    position: absolute;
+    border-color: #bd6283;
 
-    left: 17px;
+    box-shadow:
+        0 0 0 4px rgba(189,98,131,0.12);
 
-    top: 50%;
-
-    transform: translateY(-50%);
-
-    font-size: 17px;
-
-    opacity: 0.7;
+    transform: translateY(-2px);
 }
 
 
-.input-wrapper input {
+.input-box span {
+
+    font-size: 18px;
+}
+
+
+.input-box input {
 
     width: 100%;
 
-    height: 52px;
+    height: 50px;
 
-    box-sizing: border-box;
-
-    padding: 0 18px 0 48px;
-
-    border: 1px solid #ead3dc;
-
-    border-radius: 14px;
+    border: none;
 
     outline: none;
-
-    background: #fff;
 
     font-family: 'Poppins', sans-serif;
 
     font-size: 14px;
 
-    transition: 0.3s;
+    background: transparent;
+
+    color: #402632;
 }
 
 
-.input-wrapper input:focus {
-
-    border-color: #b63f70;
-
-    box-shadow:
-        0 0 0 4px rgba(182,63,112,0.10);
-
-}
-
-
-/* Login options */
+/* =====================================================
+   OPTIONS
+   ===================================================== */
 
 .login-options {
 
@@ -2513,70 +2786,77 @@ body {
 
     margin: 5px 0 25px;
 
-    font-size: 12px;
+    font-size: 13px;
 }
 
 
-.remember-me {
+.remember {
 
     display: flex;
 
-    align-items: center;
-
     gap: 6px;
 
-    color: #765564;
+    align-items: center;
+
+    color: #735763;
 }
 
 
-.login-options a {
+.remember input {
+
+    accent-color: #a94e70;
+}
+
+
+.forgot {
+
+    color: #a94e70;
 
     text-decoration: none;
 
-    color: #a73567;
-
-    font-weight: 600;
+    font-weight: 500;
 }
 
 
-.login-options a:hover {
+.forgot:hover {
 
     text-decoration: underline;
-
 }
 
 
-/* Login Button */
+/* =====================================================
+   LOGIN BUTTON
+   ===================================================== */
 
 .login-submit {
 
     width: 100%;
 
-    height: 54px;
+    height: 55px;
 
     border: none;
 
-    border-radius: 15px;
+    border-radius: 14px;
 
-    background:
-        linear-gradient(
-            135deg,
-            #8f2858,
-            #c34d7c
-        );
+    cursor: pointer;
 
     color: white;
+
+    font-family: 'Poppins', sans-serif;
 
     font-size: 16px;
 
     font-weight: 600;
 
-    font-family: 'Poppins', sans-serif;
-
-    cursor: pointer;
+    background:
+        linear-gradient(
+            135deg,
+            #a94068,
+            #d36d91
+        );
 
     box-shadow:
-        0 10px 25px rgba(143,40,88,0.30);
+        0 10px 25px rgba(160,60,100,0.30);
 
     transition: 0.3s;
 }
@@ -2595,193 +2875,203 @@ body {
     transform: translateY(-3px);
 
     box-shadow:
-        0 15px 30px rgba(143,40,88,0.40);
+        0 15px 30px rgba(160,60,100,0.40);
 }
 
 
-.login-submit:active {
+/* =====================================================
+   REGISTER
+   ===================================================== */
 
-    transform: translateY(0);
+.register-section {
 
+    margin-top: 30px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid #ead9df;
 }
 
 
-/* Create Account */
+.register-section p {
 
-.create-account {
+    margin-bottom: 10px;
 
-    text-align: center;
+    color: #80616e;
 
-    margin-top: 28px;
-
-    color: #8a6877;
-
-    font-size: 13px;
+    font-size: 14px;
 }
 
 
-.create-account p {
+.create-profile {
 
-    margin-bottom: 5px;
-}
-
-
-.create-account a {
-
-    color: #a73567;
-
-    text-decoration: none;
+    color: #a94068;
 
     font-weight: 600;
 
+    text-decoration: none;
 }
 
 
-.create-account a:hover {
+.create-profile:hover {
 
     text-decoration: underline;
 }
 
 
-/* Bottom Hearts */
-
-.login-decoration {
-
-    text-align: center;
-
-    margin-top: 25px;
-
-    letter-spacing: 12px;
-
-    color: #e2a3b9;
-
-    font-size: 12px;
-}
-
-
-/* Footer */
+/* =====================================================
+   FOOTER
+   ===================================================== */
 
 .login-footer {
 
     text-align: center;
 
-    padding: 20px;
+    padding: 25px;
 
-    background: rgba(40,10,30,0.45);
+    color: #856a76;
 
-    color: #ffeaf1;
-
-    font-size: 12px;
-
+    font-size: 13px;
 }
 
 
 .login-footer p {
 
-    margin: 4px;
+    margin: 6px;
 }
 
 
-/* =========================================
-   MOBILE RESPONSIVE
-   ========================================= */
+/* =====================================================
+   ANIMATIONS
+   ===================================================== */
 
-@media (max-width: 850px) {
+@keyframes fadeIn {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(20px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+}
+
+
+@keyframes heartBeat {
+
+    0% {
+
+        transform: scale(1);
+
+    }
+
+    25% {
+
+        transform: scale(1.15);
+
+    }
+
+    40% {
+
+        transform: scale(1);
+
+    }
+
+    60% {
+
+        transform: scale(1.12);
+
+    }
+
+    100% {
+
+        transform: scale(1);
+
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (max-width: 800px) {
 
     .login-container {
 
         grid-template-columns: 1fr;
 
-        max-width: 550px;
-
+        margin: 25px auto;
     }
 
+
+    .login-image {
+
+        min-height: 400px;
+    }
+
+
+    .image-overlay h1 {
+
+        font-size: 70px;
+    }
+
+
+    .image-overlay h2 {
+
+        font-size: 32px;
+    }
+
+
+    .login-form-section {
+
+        padding: 40px 25px;
+    }
+
+
+    .login-header .navbar {
+
+        padding: 15px 0;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+}
+
+
+@media (max-width: 450px) {
 
     .login-image {
 
         min-height: 350px;
-
     }
 
 
-    .login-form-box {
+    .image-overlay h1 {
 
-        padding: 45px 30px;
-
+        font-size: 58px;
     }
 
 
-    .balmoral {
+    .image-overlay h2 {
 
-        font-size: 60px;
-
-    }
-
-}
-
-
-@media (max-width: 600px) {
-
-    .login-page .navbar {
-
-        padding: 15px 20px;
-
+        font-size: 27px;
     }
 
 
-    .login-page .logo {
+    .login-card h2 {
 
-        font-size: 18px;
-
+        font-size: 32px;
     }
 
-
-    .login-page .nav-links {
-
-        gap: 10px;
-
-    }
-
-
-    .login-page .nav-links a:not(.register-btn) {
-
-        display: none;
-
-    }
-
-
-    .login-section {
-
-        padding: 25px 12px;
-
-    }
-
-
-    .login-image {
-
-        min-height: 300px;
-
-    }
-
-
-    .login-form-box {
-
-        padding: 35px 22px;
-
-    }
-
-
-    .login-heading h1 {
-
-        font-size: 28px;
-
-    }
-
-
-    .balmoral {
-
-        font-size: 55px;
-
-    }
-
-}
+   }
